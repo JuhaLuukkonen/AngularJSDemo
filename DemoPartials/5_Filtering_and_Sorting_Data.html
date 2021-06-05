@@ -11,10 +11,15 @@
     <br />
 
     Filter by Name:
+    <br />
     <input type="text" data-ng-model="nameText" />
     <br />
+    Filter by City:
+    <br />
+    <input type="text" data-ng-model="nameCity" />
+    <br />
 <ul>
-    <li data-ng-repeat="customer in customers | filter:nameText | orderBy:'name'">{{ customer.name | uppercase }} - {{ customer.city }}</li>
+    <li data-ng-repeat="customer in customers | filter:nameText | filter:nameCity | orderBy:'name'">{{ customer.name | uppercase }} - {{ customer.city }}</li>
 </ul>
 </div>
 
